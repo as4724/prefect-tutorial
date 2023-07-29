@@ -19,6 +19,7 @@ def get_contributors(repo_info: dict):
     response = httpx.get(contributors_url)
     response.raise_for_status()
     contributors = response.json()
+    raise ValueError("Custom error")
     return contributors
 
 
